@@ -1,0 +1,123 @@
+.select {
+  position: relative;
+  &.is-active {
+    .select__icon {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+    .select__body {
+      display: block;
+    }
+  }
+  &__header {
+    padding: 27px 23px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  &__body {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    display: none;
+  }
+  &__icon {
+    margin-left: 5px;
+    svg {
+      stroke: #FDC168;
+    }
+  }
+}
+
+.locale {
+  &__header {
+    background: #212632;
+    text-transform: uppercase;
+  }
+  &__current {
+    font-size: 12px;
+    line-height: 14px;
+    color: #FDC168;
+  }
+  &__item {
+    display: block;
+    padding: 27px 0;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 14px;
+    color: #FDC168;
+    background: #212632;
+    border-bottom: 1px solid rgba(#FDC168, .5);
+    cursor: pointer;
+    text-align: center;
+    transition: .2s linear;
+    &:last-child {
+      border-bottom: none;
+    }
+    @media (min-width: 991px) {
+      &:hover {
+        background: #FDC168;
+        color: #000;
+      }
+    }
+  }
+}
+
+.crypto {
+  margin-right: 5px;
+  width: 80px;
+  height: 63px;
+  &.is-active {
+    .crypto__header {
+      border-color: #FDC168;
+    }
+  }
+  &__header {
+    width: 100%;
+    height: 100%;
+    background: #1C202A;
+    border: 1px solid #e5e5e5;
+    transition: .2s linear;
+    @media (min-width: 991px) {
+      &:hover {
+        border-color: #FDC168;
+      }
+    }
+  }
+  .select__current {
+    svg {
+      fill: #FDC168;
+    }
+  }
+  &__body {
+    background: #212632;
+  }
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 63px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(#FDC168, .5);
+    transition: .2s linear;
+    svg {
+      fill: #FDC168;
+    }
+    &:last-child {
+      border-bottom: none;
+    }
+    @media (min-width: 991px) {
+      &:hover {
+        background: #FDC168;
+        svg {
+          fill: #fff;
+        }
+      }
+    }
+  }
+}
+

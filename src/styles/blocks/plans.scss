@@ -1,0 +1,127 @@
+.plans {
+  margin-bottom: 160px;
+  &__title {
+    margin-bottom: 109px;
+  }
+  &__container {
+    @media (max-width: 1140px) {
+      overflow: hidden;
+    }
+    @media (max-width: 540px) {
+      padding: 0 20px;
+    }
+  }
+  &__body {
+    display: flex;
+    margin: 0 -38px;
+    @media (max-width: 1140px) {
+      margin: 0px 0px 0px 0px;
+    }
+  }
+  &__col {
+    flex: 0 0 33.333333%;
+    padding: 0 38px;
+    @media (max-width: 1140px) {
+      padding: 0px 0px 0px 0px;
+      flex: 0 0 auto;
+    }
+  }
+  .plan__body {
+    border: 1px solid #FDC168;
+  }
+}
+
+.plan {
+  width: 100%;
+  &__tab {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+  @media (max-width: 1140px) {
+    width: 364px;
+  }
+  @media (max-width: 540px) {
+    width: 280px;
+  }
+  &__body {
+    position: relative;
+    padding: 50px 36px 30px;
+    border: 1px solid #FDC168;
+    border-bottom: 0;
+    border-radius: 1px 1px 0 0;
+    @media (max-width: 540px) {
+      padding: 30px 20px 30px;
+    }
+  }
+  &__title {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 39px;
+    letter-spacing: 0.035em;
+    color: #FDC168;
+    width: 182px;
+    height: 39px;
+    background: #1C202A;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  &__icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+    padding: 0 25px;
+  }
+  &__icon {
+    cursor: pointer;
+    &.active {
+      pointer-events: none;
+      svg {
+        filter: drop-shadow(0 0 10px #FDC168);
+      }
+    }
+    svg {
+      fill: #FDC168;
+      transition: .2s linear;
+      @media (min-width: 991px) {
+        &:hover {
+          filter: drop-shadow(0 0 10px #FDC168);
+        }
+      }
+    }
+  }
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 11px;
+    padding-bottom: 11px;
+    border-bottom: 1px solid rgba(#FDC168, .3);
+    &:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border: 0;
+    }
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+  }
+  &__label {
+    color: #E5E5E5;
+    margin-right: 11px;
+  }
+  &__value {
+    color: #47C147;
+  }
+  &__btn {
+    width: 100%;
+  }
+}
